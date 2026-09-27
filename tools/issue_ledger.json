@@ -4,7 +4,8 @@
   "issues": {
     "1": {
       "done": [
-        "2026-09-27 PR #2 opened: recommend command, cup/piece quantity units, HELP lists recommend; 40 passed, A/B PASS"
+        "2026-09-27 PR #2 opened: recommend command, cup/piece quantity units, HELP lists recommend; 40 passed, A/B PASS",
+        "2026-09-27 mutation declaration tests/fixtures/mutations/i1.json added; ab_verify --mutation PASS, A/B PASS, 40 passed"
       ],
       "category": "conversation",
       "first_triaged": "2026-09-27",
@@ -14,7 +15,7 @@
         "source": "\u9810\u8a2d\uff08\u6c92\u6709\u4efb\u4f55\u8a2d\u5b9a\uff09",
         "fallback": "",
         "rounds": {
-          "claude": 1
+          "claude": 2
         },
         "date": "2026-09-27"
       },
@@ -58,9 +59,16 @@
           "ref": "1a79ff6",
           "note": "recommend command + unit suffixes + tests/test_i1_recommend_and_units.py",
           "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "commit",
+          "ref": "87e056b",
+          "note": "tests/fixtures/mutations/i1.json mutation plan for tests/test_i1_recommend_and_units.py",
+          "by": "juxta-triage-bot"
         }
       ],
-      "posted": "verification-required@1a79ff6"
+      "posted": "verification-required@87e056b"
     }
   }
 }
