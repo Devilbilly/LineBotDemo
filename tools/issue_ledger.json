@@ -5,7 +5,8 @@
     "1": {
       "done": [
         "2026-09-27 PR #2 opened: recommend command, cup/piece quantity units, HELP lists recommend; 40 passed, A/B PASS",
-        "2026-09-27 mutation declaration tests/fixtures/mutations/i1.json added; ab_verify --mutation PASS, A/B PASS, 40 passed"
+        "2026-09-27 mutation declaration tests/fixtures/mutations/i1.json added; ab_verify --mutation PASS, A/B PASS, 40 passed",
+        "2026-09-27 dual-approved by Devilbilly; PR #2 merged eab9362 after premerge PASS; issue closed; knowledge landed Juxta#391"
       ],
       "category": "conversation",
       "first_triaged": "2026-09-27",
@@ -15,41 +16,47 @@
         "source": "\u9810\u8a2d\uff08\u6c92\u6709\u4efb\u4f55\u8a2d\u5b9a\uff09",
         "fallback": "",
         "rounds": {
-          "claude": 2
+          "claude": 3
         },
         "date": "2026-09-27"
       },
-      "status": "verification-required",
+      "status": "verified",
       "items": [
         {
           "id": 1,
           "item": "New recommend command replies with the exact recommendation sentence",
           "author": "Devilbilly",
           "resolved": true,
-          "verified": false,
+          "verified": true,
           "added": "2026-09-27",
           "regression": "tests/test_i1_recommend_and_units.py",
-          "resolve_note": "locked in the i1 regression"
+          "resolve_note": "locked in the i1 regression",
+          "verified_by": "Devilbilly",
+          "verified_via": "https://github.com/Devilbilly/LineBotDemo/issues/1#issuecomment-5852889985"
         },
         {
           "id": 2,
           "item": "Order quantity accepts a trailing cup or piece unit, same effect as the bare number",
           "author": "Devilbilly",
           "resolved": true,
-          "verified": false,
+          "verified": true,
           "added": "2026-09-27",
           "regression": "tests/test_i1_recommend_and_units.py",
-          "resolve_note": "locked in the i1 regression"
+          "resolve_note": "locked in the i1 regression",
+          "verified_by": "Devilbilly",
+          "verified_via": "https://github.com/Devilbilly/LineBotDemo/issues/1#issuecomment-5852889985"
         },
         {
           "id": 3,
           "item": "HELP text lists the recommend command",
           "author": "Devilbilly",
           "resolved": true,
-          "verified": false,
+          "verified": true,
           "added": "2026-09-27",
           "regression": "tests/test_i1_recommend_and_units.py",
-          "resolve_note": "locked in the i1 regression"
+          "resolve_note": "locked in the i1 regression",
+          "verified_by": "Devilbilly",
+          "verified_via": "https://github.com/Devilbilly/LineBotDemo/issues/1#issuecomment-5852889985"
         }
       ],
       "replies": [
@@ -66,9 +73,51 @@
           "ref": "87e056b",
           "note": "tests/fixtures/mutations/i1.json mutation plan for tests/test_i1_recommend_and_units.py",
           "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verify-signoff",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/1#issuecomment-5852889985",
+          "note": "sign-off by Devilbilly",
+          "by": "Devilbilly"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verified",
+          "ref": "dual-approval",
+          "note": "verified \u2014 both roles signed (Devilbilly)",
+          "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verify-signoff",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/1#issuecomment-5852890096",
+          "note": "sign-off by Devilbilly",
+          "by": "Devilbilly"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verified",
+          "ref": "dual-approval",
+          "note": "verified \u2014 both roles signed (Devilbilly)",
+          "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "commit",
+          "ref": "eab9362",
+          "note": "merge of PR #2 (recommend + units + mutation plan)",
+          "by": "juxta-triage-bot"
         }
       ],
-      "posted": "verification-required@87e056b"
+      "posted": "verified@eab9362",
+      "filer": "Devilbilly",
+      "verify_signoffs": {
+        "Devilbilly": {
+          "date": "2026-09-27",
+          "via": "https://github.com/Devilbilly/LineBotDemo/issues/1#issuecomment-5852890096"
+        }
+      }
     }
   }
 }
