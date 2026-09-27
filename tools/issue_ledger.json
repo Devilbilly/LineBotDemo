@@ -118,6 +118,50 @@
           "via": "https://github.com/Devilbilly/LineBotDemo/issues/1#issuecomment-5852890096"
         }
       }
+    },
+    "3": {
+      "done": [
+        "2026-09-27 reproduced (Pages 404 on bot/__init__.py), fixed in PR #4, A/B + mutation PASS"
+      ],
+      "en_index": {
+        "title": "[BUG] Bot errors out",
+        "summary": "Loading fails with a Pyodide PythonError: /app/bot/__init__.py line 14 contains CSS (`.container { margin: 50px auto 40px auto; width: 600px; text-align: center; }`), which raises `SyntaxError: invalid decimal literal` during eval_code."
+      },
+      "first_triaged": "2026-09-27",
+      "last_updated": "2026-09-27",
+      "category": "tests",
+      "runtime": {
+        "last": "claude",
+        "source": "drawn at first spawn 2026-09-27T13:40:25Z (claude 50 / codex 50; roll 0.3894)",
+        "fallback": "",
+        "rounds": {
+          "claude": 1
+        },
+        "date": "2026-09-27"
+      },
+      "status": "verification-required",
+      "items": [
+        {
+          "id": 1,
+          "item": "Online simulator fails to load: bot/__init__.py is a GitHub Pages 404 page, run as Python (SyntaxError: invalid decimal literal)",
+          "author": "Devilbilly",
+          "resolved": true,
+          "verified": false,
+          "added": "2026-09-27",
+          "regression": "tests/test_i3_pages_simulator_load.py",
+          "resolve_note": ".nojekyll so Pages publishes bot/__init__.py; chat.js stops at a failed fetch and names the file and status"
+        }
+      ],
+      "replies": [
+        {
+          "date": "2026-09-27",
+          "kind": "commit",
+          "ref": "0cf6709",
+          "note": ".nojekyll + chat.js fetch-status check + tests/test_i3_pages_simulator_load.py",
+          "by": "juxta-triage-bot"
+        }
+      ],
+      "posted": "verification-required@0cf6709"
     }
   }
 }
