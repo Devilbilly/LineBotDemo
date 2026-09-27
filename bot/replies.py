@@ -1,14 +1,19 @@
+import re
+
 from .menu import MENU, OPENING_HOURS, PICKUP_MINUTES, price
 
 HELP = (
     "您好！我是小巷咖啡點餐小幫手，可以輸入：\n"
     "・菜單\n"
     "・營業時間\n"
+    "・推薦\n"
     "・點 品名 數量（例如：點 拿鐵 2）\n"
     "・購物車\n"
     "・清空\n"
     "・結帳"
 )
+
+RECOMMEND = "今日推薦：摩卡，搭配重乳酪蛋糕只要 NT$199"
 
 
 class Orders:
@@ -44,9 +49,10 @@ def _order(text, cart):
         return f"找不到「{name}」，輸入「菜單」看看有什麼"
     quantity = 1
     if len(parts) >= 3:
-        if not parts[2].isdigit() or not 1 <= int(parts[2]) <= 20:
+        match = re.fullmatch(r"(\d+)[杯個]?", parts[2])
+        if not match or not 1 <= int(match.group(1)) <= 20:
             return "數量請輸入 1 到 20 的數字"
-        quantity = int(parts[2])
+        quantity = int(match.group(1))
     cart[name] = cart.get(name, 0) + quantity
     return f"已加入 {name} × {quantity}，目前合計 {price(_total(cart))}"
 
@@ -58,6 +64,8 @@ def reply_for(text, user_id, orders):
         return [_menu_text()]
     if text == "營業時間":
         return [f"營業時間：{OPENING_HOURS}"]
+    if text == "推薦":
+        return [RECOMMEND]
     if text.startswith("點"):
         return [_order(text, cart)]
     if text == "購物車":
