@@ -2,6 +2,8 @@
 
 一個用 Python（Flask + LINE Messaging API SDK v3）寫的 LINE 聊天機器人，用來示範 Juxta 如何處理聊天機器人專案：在 issue 裡用中文提出需求，Juxta 的 worker 修改機器人並補上測試，審查與簽核通過後合併。
 
+- 線上試用（不需要 LINE 帳號）：https://devilbilly.github.io/LineBotDemo/
+
 ## 機器人會做什麼
 
 | 使用者輸入 | 回覆 |
@@ -25,6 +27,10 @@ python -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -m pytest -q          # 測試不連網：簽章用測試用的 secret，回覆 API 以替身取代
 printf '菜單\n點 拿鐵 2\n結帳\n' | .venv/bin/python -m bot.cli   # 不用 LINE 帳號的本機模擬
 ```
+
+## 線上試用頁
+
+`index.html` 是一個聊天頁面，在瀏覽器裡用 Pyodide 執行同一份 `bot/replies.py`，所以試用頁和真的機器人回覆完全一樣。它放在 GitHub Pages 上，任何人都能打開。
 
 ## 接上真的 LINE 頻道
 

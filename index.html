@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小巷咖啡 LINE 點餐小幫手｜線上試用</title>
+  <link rel="stylesheet" href="web/chat.css">
+</head>
+<body>
+  <header class="bar">
+    <h1>小巷咖啡點餐小幫手</h1>
+    <p>線上試用：不需要 LINE 帳號，回覆和真的機器人用同一份程式（<code>bot/replies.py</code>）</p>
+  </header>
+  <main id="chat" class="chat" aria-live="polite">
+    <p id="loading" class="system">正在載入機器人…</p>
+  </main>
+  <form id="composer" class="composer" autocomplete="off">
+    <input id="message" name="message" placeholder="輸入訊息，例如：菜單" aria-label="訊息" disabled>
+    <button id="send" type="submit" disabled>送出</button>
+  </form>
+  <nav class="quick" aria-label="常用指令">
+    <button type="button" data-text="菜單">菜單</button>
+    <button type="button" data-text="營業時間">營業時間</button>
+    <button type="button" data-text="點 拿鐵 2">點 拿鐵 2</button>
+    <button type="button" data-text="購物車">購物車</button>
+    <button type="button" data-text="結帳">結帳</button>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.27.7/full/pyodide.js"></script>
+  <script src="web/chat.js"></script>
+</body>
+</html>
