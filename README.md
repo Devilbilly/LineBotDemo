@@ -34,6 +34,8 @@ printf '菜單\n點 拿鐵 2\n結帳\n' | .venv/bin/python -m bot.cli   # 不用
 
 ## 接上真的 LINE 頻道
 
+部署到 Cloud Run 時，Google Cloud 的 buildpacks 會讀 `requirements.txt` 並用 `Procfile`（gunicorn，入口 `app:app_from_env()`）啟動服務；`LINE_CHANNEL_SECRET`、`LINE_CHANNEL_ACCESS_TOKEN` 以 Secret Manager 的環境變數提供。購物車存在記憶體裡，Demo 請把最大執行個體數設為 1。
+
 1. 在 LINE Developers 建立 Messaging API channel，取得 Channel secret 與 Channel access token。
 2. 以環境變數 `LINE_CHANNEL_SECRET`、`LINE_CHANNEL_ACCESS_TOKEN` 啟動 `python app.py`（預設 port 8080）。
 3. 把可從外部連到的 HTTPS 網址 `https://<你的網域>/callback` 設為 Webhook URL（例如部署在 Cloud Run）。

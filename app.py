@@ -47,7 +47,10 @@ def create_app(channel_secret, send):
     return app
 
 
+def app_from_env():
+    return create_app(os.environ["LINE_CHANNEL_SECRET"],
+                      line_sender(os.environ["LINE_CHANNEL_ACCESS_TOKEN"]))
+
+
 if __name__ == "__main__":
-    application = create_app(os.environ["LINE_CHANNEL_SECRET"],
-                             line_sender(os.environ["LINE_CHANNEL_ACCESS_TOKEN"]))
-    application.run(host="0.0.0.0", port=int(os.environ.get("PORT", "8080")))
+    app_from_env().run(host="0.0.0.0", port=int(os.environ.get("PORT", "8080")))
