@@ -121,7 +121,8 @@
     },
     "3": {
       "done": [
-        "2026-09-27 reproduced (Pages 404 on bot/__init__.py), fixed in PR #4, A/B + mutation PASS"
+        "2026-09-27 reproduced (Pages 404 on bot/__init__.py), fixed in PR #4, A/B + mutation PASS",
+        "2026-09-27 owner verified; merged PR #4 as 3f4a406 (gate PASS); live Pages bot/__init__.py 200, simulator loads"
       ],
       "en_index": {
         "title": "[BUG] Bot errors out",
@@ -135,21 +136,23 @@
         "source": "drawn at first spawn 2026-09-27T13:40:25Z (claude 50 / codex 50; roll 0.3894)",
         "fallback": "",
         "rounds": {
-          "claude": 1
+          "claude": 2
         },
         "date": "2026-09-27"
       },
-      "status": "verification-required",
+      "status": "verified",
       "items": [
         {
           "id": 1,
           "item": "Online simulator fails to load: bot/__init__.py is a GitHub Pages 404 page, run as Python (SyntaxError: invalid decimal literal)",
           "author": "Devilbilly",
           "resolved": true,
-          "verified": false,
+          "verified": true,
           "added": "2026-09-27",
           "regression": "tests/test_i3_pages_simulator_load.py",
-          "resolve_note": ".nojekyll so Pages publishes bot/__init__.py; chat.js stops at a failed fetch and names the file and status"
+          "resolve_note": ".nojekyll so Pages publishes bot/__init__.py; chat.js stops at a failed fetch and names the file and status",
+          "verified_by": "Devilbilly",
+          "verified_via": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-5856456841"
         }
       ],
       "replies": [
@@ -159,9 +162,51 @@
           "ref": "0cf6709",
           "note": ".nojekyll + chat.js fetch-status check + tests/test_i3_pages_simulator_load.py",
           "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verify-signoff",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-5856456841",
+          "note": "sign-off by Devilbilly",
+          "by": "Devilbilly"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verified",
+          "ref": "dual-approval",
+          "note": "verified \u2014 both roles signed (Devilbilly)",
+          "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verify-signoff",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-5856456948",
+          "note": "sign-off by Devilbilly",
+          "by": "Devilbilly"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "verified",
+          "ref": "dual-approval",
+          "note": "verified \u2014 both roles signed (Devilbilly)",
+          "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-27",
+          "kind": "commit",
+          "ref": "3f4a406",
+          "note": "merge of PR #4 (.nojekyll + chat.js fetch check + tests/test_i3_pages_simulator_load.py)",
+          "by": "juxta-triage-bot"
         }
       ],
-      "posted": "verification-required@0cf6709"
+      "posted": "verified@3f4a406",
+      "filer": "Devilbilly",
+      "verify_signoffs": {
+        "Devilbilly": {
+          "date": "2026-09-27",
+          "via": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-5856456948"
+        }
+      }
     }
   }
 }
