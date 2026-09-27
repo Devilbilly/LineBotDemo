@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "repairs": [
+    {
+      "regression": "tests/test_i3_pages_simulator_load.py",
+      "changes": [
+        {
+          "path": "web/chat.js",
+          "repaired": "    if (!response.ok) throw new Error(`bot/${name}: HTTP ${response.status}`);\n",
+          "removed": "    // Mutation: the HTTP status is not checked.\n"
+        }
+      ],
+      "expected": [
+        {
+          "nodeid": "tests/test_i3_pages_simulator_load.py::test_without_nojekyll_the_loader_names_the_missing_file",
+          "message": "the loader must name the missing file"
+        },
+        {
+          "nodeid": "tests/test_i3_pages_simulator_load.py::test_a_404_never_reaches_python",
+          "message": "an HTTP error page must never be written as Python source"
+        },
+        {
+          "nodeid": "tests/test_i3_pages_simulator_load.py::test_a_server_error_on_the_last_file_is_reported",
+          "message": "a 500 must be reported with its status"
+        },
+        {
+          "nodeid": "tests/test_i3_pages_simulator_load.py::test_the_loader_stops_at_the_first_missing_file",
+          "message": "loading must stop at the first failure"
+        }
+      ]
+    }
+  ]
+}
