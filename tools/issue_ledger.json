@@ -1,5 +1,66 @@
 {
   "schema": 1,
   "repo": "Devilbilly/LineBotDemo",
-  "issues": {}
+  "issues": {
+    "1": {
+      "done": [
+        "2026-09-27 PR #2 opened: recommend command, cup/piece quantity units, HELP lists recommend; 40 passed, A/B PASS"
+      ],
+      "category": "conversation",
+      "first_triaged": "2026-09-27",
+      "last_updated": "2026-09-27",
+      "runtime": {
+        "last": "claude",
+        "source": "\u9810\u8a2d\uff08\u6c92\u6709\u4efb\u4f55\u8a2d\u5b9a\uff09",
+        "fallback": "",
+        "rounds": {
+          "claude": 1
+        },
+        "date": "2026-09-27"
+      },
+      "status": "verification-required",
+      "items": [
+        {
+          "id": 1,
+          "item": "New recommend command replies with the exact recommendation sentence",
+          "author": "Devilbilly",
+          "resolved": true,
+          "verified": false,
+          "added": "2026-09-27",
+          "regression": "tests/test_i1_recommend_and_units.py",
+          "resolve_note": "locked in the i1 regression"
+        },
+        {
+          "id": 2,
+          "item": "Order quantity accepts a trailing cup or piece unit, same effect as the bare number",
+          "author": "Devilbilly",
+          "resolved": true,
+          "verified": false,
+          "added": "2026-09-27",
+          "regression": "tests/test_i1_recommend_and_units.py",
+          "resolve_note": "locked in the i1 regression"
+        },
+        {
+          "id": 3,
+          "item": "HELP text lists the recommend command",
+          "author": "Devilbilly",
+          "resolved": true,
+          "verified": false,
+          "added": "2026-09-27",
+          "regression": "tests/test_i1_recommend_and_units.py",
+          "resolve_note": "locked in the i1 regression"
+        }
+      ],
+      "replies": [
+        {
+          "date": "2026-09-27",
+          "kind": "commit",
+          "ref": "1a79ff6",
+          "note": "recommend command + unit suffixes + tests/test_i1_recommend_and_units.py",
+          "by": "juxta-triage-bot"
+        }
+      ],
+      "posted": "verification-required@1a79ff6"
+    }
+  }
 }
