@@ -15,8 +15,9 @@ async function loadBot() {
   const pyodide = await loadPyodide();
   pyodide.FS.mkdirTree("/app/bot");
   for (const name of ["__init__.py", "menu.py", "replies.py"]) {
-    const source = await (await fetch(`bot/${name}`)).text();
-    pyodide.FS.writeFile(`/app/bot/${name}`, source);
+    const response = await fetch(`bot/${name}`);
+    if (!response.ok) throw new Error(`bot/${name}: HTTP ${response.status}`);
+    pyodide.FS.writeFile(`/app/bot/${name}`, await response.text());
   }
   pyodide.runPython("import sys; sys.path.insert(0, '/app')");
   pyodide.runPython("from bot.replies import Orders, reply_for; orders = Orders()");
