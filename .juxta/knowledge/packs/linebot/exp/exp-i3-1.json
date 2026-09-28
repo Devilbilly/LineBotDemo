@@ -1,0 +1,15 @@
+{
+ "id": "exp-i3-1",
+ "domain": "tests",
+ "situation": "A LINE bot repo publishes a browser simulator on GitHub Pages (legacy build from a branch) that fetches the bot's Python package files, e.g. bot/__init__.py, and runs them with Pyodide",
+ "right_direction": "Add an empty .nojekyll at the Pages source root so files starting with an underscore are published, check response.ok before writing fetched source into the Pyodide file system, and lock it by driving the real web/chat.js in Node vm with a Pages-rules stand-in site, then running the written files with CPython",
+ "anti_pattern": "Assuming the page works because menu.py and replies.py load: Jekyll silently 404s underscore files, and an unchecked fetch hands the HTML 404 page to Python, which surfaces as a baffling SyntaxError (invalid decimal literal) instead of a missing-file error",
+ "anti_signals": [],
+ "strength": 1,
+ "sources": [
+  "#3"
+ ],
+ "teacher": "agent",
+ "lock": "tests/test_i3_pages_simulator_load.py",
+ "tool": ""
+}

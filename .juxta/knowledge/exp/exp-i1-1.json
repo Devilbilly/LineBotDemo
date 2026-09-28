@@ -1,0 +1,15 @@
+{
+ "id": "exp-i1-1",
+ "domain": "conversation",
+ "situation": "A chat command reads a number the user typed (a quantity, a count), possibly with a unit suffix",
+ "right_direction": "Match it with re.fullmatch on a decimal-digit pattern (optionally with the allowed unit suffixes) and int() the captured group; reject anything else with the existing error reply",
+ "anti_pattern": "Checking str.isdigit() before int(): isdigit accepts superscript digits such as U+00B2 that int() rejects, so the reply handler raises ValueError instead of answering",
+ "anti_signals": [],
+ "strength": 1,
+ "sources": [
+  "#1"
+ ],
+ "teacher": "agent",
+ "lock": "tests/test_i1_recommend_and_units.py",
+ "tool": ""
+}
