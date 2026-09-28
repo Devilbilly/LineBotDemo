@@ -207,6 +207,45 @@
           "via": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-5856456948"
         }
       }
+    },
+    "6": {
+      "done": [
+        "2026-09-28 copied 3 experience entries byte-for-byte from Juxta 8a2bb14 into .juxta/knowledge; PR #7"
+      ],
+      "en_index": {
+        "title": "Move LineBotDemo's experience from Juxta back into this repo's .juxta/knowledge",
+        "summary": "Per Juxta #404's new rule that client knowledge lives in the client's own repo, copy three experience files (exp-i1-1, exp-i1-2, and the linebot pack's exp-i3-1) byte-for-byte from Juxta main (8a2bb14) into LineBotDemo's .juxta/knowledge/, keeping ids, sources, and locks unchanged. Done when the files match exactly, the merge gate's knowledge check passes, the next worker prompt's PRIOR EXPERIENCE"
+      },
+      "first_triaged": "2026-09-28",
+      "last_updated": "2026-09-28",
+      "category": "generic",
+      "runtime": {
+        "last": "claude",
+        "source": "drawn at first spawn 2026-09-28T00:59:42Z (claude 50 / codex 50; roll 0.122)",
+        "fallback": "",
+        "rounds": {
+          "claude": 1
+        },
+        "date": "2026-09-28"
+      },
+      "status": "verification-required",
+      "replies": [
+        {
+          "date": "2026-09-28",
+          "kind": "commit",
+          "ref": "c5b10bf",
+          "note": "add .juxta/knowledge exp-i1-1, exp-i1-2, packs/linebot exp-i3-1",
+          "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-28",
+          "kind": "commented",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/6#issuecomment-5861515183",
+          "note": "report: 3 knowledge files moved, PR #7",
+          "by": "juxta-triage-bot"
+        }
+      ],
+      "posted": "verification-required@c5b10bf"
     }
   }
 }
