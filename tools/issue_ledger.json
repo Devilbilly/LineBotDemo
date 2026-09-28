@@ -210,7 +210,8 @@
     },
     "6": {
       "done": [
-        "2026-09-28 copied 3 experience entries byte-for-byte from Juxta 8a2bb14 into .juxta/knowledge; PR #7"
+        "2026-09-28 copied 3 experience entries byte-for-byte from Juxta 8a2bb14 into .juxta/knowledge; PR #7",
+        "2026-09-28 owner verified; PR #7 merged as 7fbb58e (premerge PASS); issue closed"
       ],
       "en_index": {
         "title": "Move LineBotDemo's experience from Juxta back into this repo's .juxta/knowledge",
@@ -224,11 +225,11 @@
         "source": "drawn at first spawn 2026-09-28T00:59:42Z (claude 50 / codex 50; roll 0.122)",
         "fallback": "",
         "rounds": {
-          "claude": 1
+          "claude": 2
         },
         "date": "2026-09-28"
       },
-      "status": "verification-required",
+      "status": "verified",
       "replies": [
         {
           "date": "2026-09-28",
@@ -243,9 +244,38 @@
           "ref": "https://github.com/Devilbilly/LineBotDemo/issues/6#issuecomment-5861515183",
           "note": "report: 3 knowledge files moved, PR #7",
           "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-28",
+          "kind": "verify-signoff",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/6#issuecomment-5861545308",
+          "note": "sign-off by Devilbilly",
+          "by": "Devilbilly"
+        },
+        {
+          "date": "2026-09-28",
+          "kind": "verified",
+          "ref": "dual-approval",
+          "note": "verified \u2014 both roles signed (Devilbilly)",
+          "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-28",
+          "kind": "commented",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/6#issuecomment-5861563115",
+          "note": "merged PR #7 as 7fbb58e, gate PASS",
+          "by": "juxta-triage-bot"
         }
       ],
-      "posted": "verification-required@c5b10bf"
+      "posted": "verified@7fbb58e",
+      "filer": "Devilbilly",
+      "verify_signoffs": {
+        "Devilbilly": {
+          "date": "2026-09-28",
+          "via": "https://github.com/Devilbilly/LineBotDemo/issues/6#issuecomment-5861545308"
+        }
+      },
+      "items": []
     }
   }
 }
