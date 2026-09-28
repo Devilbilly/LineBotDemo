@@ -1,0 +1,15 @@
+{
+ "id": "exp-i1-2",
+ "domain": "tests",
+ "situation": "Writing the merge-gate mutation plan tests/fixtures/mutations/i<N>.json for a fix whose repairs are several separate edits in one source file, tested by parametrized cases with non-ASCII IDs.",
+ "right_direction": "Declare one change per file whose repaired snippet spans all the edits contiguously; make removed the fixed region with each repair switched off, not main's code, so the tests fail with AssertionError only; run a draft plan with --report and copy the real failing node IDs and assertion messages into expected, then rerun until Mutation PASS.",
+ "anti_pattern": "Listing several changes for the same path (rejected as duplicate target); reverting to main's code when it raises ValueError on an edge case (not a behavioral assertion); hand-typing parametrize node IDs that pytest escapes.",
+ "anti_signals": [],
+ "strength": 1,
+ "sources": [
+  "#1"
+ ],
+ "teacher": "agent",
+ "lock": "tests/fixtures/mutations/i1.json",
+ "tool": ""
+}
