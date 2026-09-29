@@ -1,0 +1,17 @@
+{
+ "id": "exp-i8-2",
+ "domain": "tests",
+ "situation": "A zh-TW issue quotes the bot's expected replies in \u300c\u300d but typed them with half-width punctuation (, : ( )), while the bot's existing replies use full-width (\uff0c\uff1a\uff08\uff09)",
+ "right_direction": "Keep each quoted sentence in the regression exactly as typed (the verbatim check needs it), map only the half-width marks to the bot's full-width ones in one declared translate table, and prove the mapping with the filer's own quote of a reply that must stay unchanged (e.g. \u5df2\u52a0\u5165 \u6469\u5361 \u00d7 3,\u76ee\u524d\u5408\u8a08 \u2192 today's \u5df2\u52a0\u5165 \u6469\u5361 \u00d7 3\uff0c\u76ee\u524d\u5408\u8a08); say the mapping in the report so the filer can ask for literal half-width",
+ "anti_pattern": "Either copying the half-width marks into the bot so one reply breaks the house style, or retyping the quotes in full-width in the test so the verbatim check no longer finds the filer's wording",
+ "anti_signals": [],
+ "strength": 1,
+ "sources": [
+  "#8"
+ ],
+ "teacher": "agent",
+ "lock": "tests/test_i8_sweetness_and_ice.py",
+ "tool": "",
+ "source_quote": "\u8f38\u5165\u300c\u9ede \u6469\u5361 3\u676f\u300d(\u6c92\u6709\u5ba2\u88fd),\u884c\u70ba\u8207\u73fe\u5728\u5b8c\u5168\u76f8\u540c,\u56de\u8986\u300c\u5df2\u52a0\u5165 \u6469\u5361 \u00d7 3,\u76ee\u524d\u5408\u8a08 NT$XXX\u300d\u3002",
+ "source_url": "#8"
+}
