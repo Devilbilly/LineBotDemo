@@ -280,7 +280,8 @@
     "8": {
       "done": [
         "2026-09-30 per-cup sweetness/ice (\u9ede\u9910/\u8cfc\u7269\u8eca/\u7d50\u5e33/\u8aaa\u660e), PR #9, 112 passed, A/B + mutation PASS",
-        "2026-09-30 owner sign-off recorded (5896184743); merge held for filer @jasonwu-093026 per owner comment 5896184311"
+        "2026-09-30 owner sign-off recorded (5896184743); merge held for filer @jasonwu-093026 per owner comment 5896184311",
+        "2026-09-30 filer sign-off (5896777169); pre-merge gate PASS; PR #9 merged a1d181d; issue closed"
       ],
       "category": "conversation",
       "first_triaged": "2026-09-29",
@@ -290,11 +291,11 @@
         "source": "env JUXTA_WORKER_RUNTIME",
         "fallback": "",
         "rounds": {
-          "claude": 2
+          "claude": 3
         },
         "date": "2026-09-29"
       },
-      "status": "verification-required",
+      "status": "verified",
       "items": [
         {
           "id": 1,
@@ -345,14 +346,39 @@
           "ref": "https://github.com/Devilbilly/LineBotDemo/issues/8#issuecomment-5896222850",
           "note": "owner sign-off recorded; merge held for filer per owner comment 5896184311",
           "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-30",
+          "kind": "verify-signoff",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/8#issuecomment-5896777169",
+          "note": "sign-off by jasonwu-093026",
+          "by": "jasonwu-093026"
+        },
+        {
+          "date": "2026-09-30",
+          "kind": "verified",
+          "ref": "dual-approval",
+          "note": "verified \u2014 both roles signed (Devilbilly, jasonwu-093026)",
+          "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-09-30",
+          "kind": "commented",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/8#issuecomment-5896807327",
+          "note": "merged a1d181d",
+          "by": "juxta-triage-bot"
         }
       ],
-      "posted": "verification-required@ffd522a",
+      "posted": "verified@a1d181d",
       "filer": "jasonwu-093026",
       "verify_signoffs": {
         "Devilbilly": {
           "date": "2026-09-30",
           "via": "https://github.com/Devilbilly/LineBotDemo/issues/8#issuecomment-5896184743"
+        },
+        "jasonwu-093026": {
+          "date": "2026-09-30",
+          "via": "https://github.com/Devilbilly/LineBotDemo/issues/8#issuecomment-5896777169"
         }
       }
     }
