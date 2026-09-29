@@ -276,6 +276,46 @@
         }
       },
       "items": []
+    },
+    "8": {
+      "done": [
+        "2026-09-30 per-cup sweetness/ice (\u9ede\u9910/\u8cfc\u7269\u8eca/\u7d50\u5e33/\u8aaa\u660e), PR #9, 112 passed, A/B + mutation PASS"
+      ],
+      "category": "conversation",
+      "first_triaged": "2026-09-29",
+      "last_updated": "2026-09-30",
+      "runtime": {
+        "last": "claude",
+        "source": "env JUXTA_WORKER_RUNTIME",
+        "fallback": "",
+        "rounds": {
+          "claude": 1
+        },
+        "date": "2026-09-29"
+      },
+      "status": "verification-required",
+      "items": [
+        {
+          "id": 1,
+          "item": "\u6bcf\u676f\u53ef\u5206\u5225\u6307\u5b9a\u751c\u5ea6\u8207\u51b0\u91cf\uff08\u9ede\u9910\u3001\u8cfc\u7269\u8eca\u3001\u7d50\u5e33\u3001\u8aaa\u660e\uff09\uff1b\u6c92\u6709\u6307\u5b9a\u6642\u884c\u70ba\u4e0d\u8b8a",
+          "author": "jasonwu-093026",
+          "resolved": true,
+          "verified": false,
+          "added": "2026-09-30",
+          "regression": "tests/test_i8_sweetness_and_ice.py",
+          "resolve_note": "per-cup sweetness/ice parsing in bot/replies.py; cart keyed by (name, spec)"
+        }
+      ],
+      "replies": [
+        {
+          "date": "2026-09-30",
+          "kind": "commit",
+          "ref": "ffd522a",
+          "note": "per-cup sweetness and ice + tests/test_i8_sweetness_and_ice.py",
+          "by": "juxta-triage-bot"
+        }
+      ],
+      "posted": "verification-required@ffd522a"
     }
   }
 }
