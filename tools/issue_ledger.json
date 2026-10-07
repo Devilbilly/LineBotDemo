@@ -123,7 +123,8 @@
       "done": [
         "2026-09-27 reproduced (Pages 404 on bot/__init__.py), fixed in PR #4, A/B + mutation PASS",
         "2026-09-27 owner verified; merged PR #4 as 3f4a406 (gate PASS); live Pages bot/__init__.py 200, simulator loads",
-        "2026-10-07 owner reopened #3 with no comment; verified live site + .nojekyll fix still intact, full chat flow (incl. #8's sweetness/ice) works with no errors; could not reproduce, asked owner for repro details (ask-i3-1), status blocked"
+        "2026-10-07 owner reopened #3 with no comment; verified live site + .nojekyll fix still intact, full chat flow (incl. #8's sweetness/ice) works with no errors; could not reproduce, asked owner for repro details (ask-i3-1), status blocked",
+        "2026-10-07 confirmed false reopen: operator FYI explains a shared-disk-full daemon glitch (08:14-08:21 UTC) reopened several already-verified issues incl. this one; no code or main changed; owner then replied 'verified' (6034570915)"
       ],
       "en_index": {
         "title": "[BUG] Bot errors out",
@@ -137,11 +138,11 @@
         "source": "drawn at first spawn 2026-09-27T13:40:25Z (claude 50 / codex 50; roll 0.3894)",
         "fallback": "",
         "rounds": {
-          "claude": 3
+          "claude": 4
         },
         "date": "2026-10-07"
       },
-      "status": "blocked",
+      "status": "verified",
       "items": [
         {
           "id": 1,
@@ -205,15 +206,46 @@
           "ref": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-6034099541",
           "note": "owner reopened with no comment/description on 2026-10-07; checked live site + full bot conversation flow, found nothing broken; asked owner for repro steps (ask-i3-1)",
           "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-10-07",
+          "kind": "verify-signoff",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-6034570915",
+          "note": "sign-off by Devilbilly",
+          "by": "Devilbilly"
+        },
+        {
+          "date": "2026-10-07",
+          "kind": "verified",
+          "ref": "dual-approval",
+          "note": "verified \u2014 both roles signed (Devilbilly)",
+          "by": "juxta-triage-bot"
         }
       ],
       "posted": "blocked@a1d181d",
       "filer": "Devilbilly",
       "verify_signoffs": {
         "Devilbilly": {
-          "date": "2026-09-27",
-          "via": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-5856456948"
+          "date": "2026-10-07",
+          "via": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-6034570915"
         }
+      },
+      "bounces": [
+        {
+          "cat": "manifest-missing",
+          "ts": "2026-10-07",
+          "detail": "no JUXTA-MANIFEST block in the run output (neither in the stream nor in .juxta/manifest.json)"
+        }
+      ],
+      "handoff": {
+        "state": "pending",
+        "head": "",
+        "run_id": "",
+        "at": "2026-10-07",
+        "fails": 0,
+        "errors": 1,
+        "error": "no pushed head refs/heads/triage/3 on origin",
+        "retry_after": 1791363678.3846278
       }
     },
     "6": {
