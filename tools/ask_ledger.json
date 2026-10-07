@@ -1,4 +1,16 @@
 {
   "schema": 1,
-  "asks": []
+  "asks": [
+    {
+      "id": "ask-i3-1",
+      "domain": "conversation",
+      "question": "issue #3 reopened by owner on 2026-10-07 with no comment; what is currently failing / steps to reproduce?",
+      "answer": "",
+      "sources": [
+        "#3"
+      ],
+      "asked_date": "2026-10-07",
+      "answered_date": ""
+    }
+  ]
 }

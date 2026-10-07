@@ -122,25 +122,26 @@
     "3": {
       "done": [
         "2026-09-27 reproduced (Pages 404 on bot/__init__.py), fixed in PR #4, A/B + mutation PASS",
-        "2026-09-27 owner verified; merged PR #4 as 3f4a406 (gate PASS); live Pages bot/__init__.py 200, simulator loads"
+        "2026-09-27 owner verified; merged PR #4 as 3f4a406 (gate PASS); live Pages bot/__init__.py 200, simulator loads",
+        "2026-10-07 owner reopened #3 with no comment; verified live site + .nojekyll fix still intact, full chat flow (incl. #8's sweetness/ice) works with no errors; could not reproduce, asked owner for repro details (ask-i3-1), status blocked"
       ],
       "en_index": {
         "title": "[BUG] Bot errors out",
         "summary": "Loading fails with a Pyodide PythonError: /app/bot/__init__.py line 14 contains CSS (`.container { margin: 50px auto 40px auto; width: 600px; text-align: center; }`), which raises `SyntaxError: invalid decimal literal` during eval_code."
       },
       "first_triaged": "2026-09-27",
-      "last_updated": "2026-09-27",
+      "last_updated": "2026-10-07",
       "category": "tests",
       "runtime": {
         "last": "claude",
         "source": "drawn at first spawn 2026-09-27T13:40:25Z (claude 50 / codex 50; roll 0.3894)",
         "fallback": "",
         "rounds": {
-          "claude": 2
+          "claude": 3
         },
-        "date": "2026-09-27"
+        "date": "2026-10-07"
       },
-      "status": "verified",
+      "status": "blocked",
       "items": [
         {
           "id": 1,
@@ -197,9 +198,16 @@
           "ref": "3f4a406",
           "note": "merge of PR #4 (.nojekyll + chat.js fetch check + tests/test_i3_pages_simulator_load.py)",
           "by": "juxta-triage-bot"
+        },
+        {
+          "date": "2026-10-07",
+          "kind": "commented",
+          "ref": "https://github.com/Devilbilly/LineBotDemo/issues/3#issuecomment-6034099541",
+          "note": "owner reopened with no comment/description on 2026-10-07; checked live site + full bot conversation flow, found nothing broken; asked owner for repro steps (ask-i3-1)",
+          "by": "juxta-triage-bot"
         }
       ],
-      "posted": "verified@3f4a406",
+      "posted": "blocked@a1d181d",
       "filer": "Devilbilly",
       "verify_signoffs": {
         "Devilbilly": {
